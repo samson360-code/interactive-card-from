@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    /* margin: 0; */
+    /* padding: 0; */
+}
+
+:root {
+    --Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --Red: hsl(0, 100%, 66%);
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--White);
+    height: 100vh;
+    width: 100%;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+
+.card {
+    /* margin: 0; */
+    /* padding: 0; */
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.front {
+    translate: 10rem 0;
+}
+
+.back {
+    translate: 15rem 0;
+}
+
+.cvc {
+    position: absolute;
+    top: 38%;
+    right: 20%;
+}
+
+.image-cntr {
+    position: relative;
+}
+
+.print {
+    text-transform: capitalize;
+    position: absolute;
+    inset: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.print>div {
+    padding-inline: 2rem;
+
+}
+
+figure {
+    padding: 0;
+    margin-inline: 1.5rem;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.print .card-num {
+    font-size: 2rem;
+    padding: 0;
+    margin-block: 0rem;
+}
+
+.last-flexer {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: start;
+}
+
+.form {
+    display: flex;
+    /* display: none; */
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: grid;
+    width: 25rem;
+    color: black;
+}
+
+form label {
+    color: var(--Very-dark-violet);
+}
+
+.blocker>* {
+    display: block;
+    margin-block: 0.5rem;
+}
+
+input,
+button {
+    padding: 1rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 0;
+    outline: 0.5px solid black;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+button {
+    /* background:linear-gradent( from hsl(249, 99%, 64%) to hsl(278, 94%, 30%)); */
+    background-color: var(--Very-dark-violet);
+    color: white;
+    font-size: 1.5rem;
+    margin-block: 1rem;
+}
+button:hover{
+       background:linear-gradient( to right, hsl(249, 99%, 64%) , hsl(278, 94%, 30%))!important;
+ 
+}
+.flexer-input,
+.inliner {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 1rem;
+    flex: 0.5;
+}
+
+.inliner>* {
+    flex: 1;
+}
+
+.thank {
+    text-align: center;
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.thank button {
+    background:linear-gradient( to right ,hsl(249, 99%, 64%) ,hsl(278, 94%, 30%));
+    padding-inline: 9rem;
+
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
+    height: 0.5rem;
+}
+
+
+@media (max-width:1030px) {
+    main {
+        grid-template-columns: auto;
+    }
+
+    section {
+        padding-inline: 1rem;
+    }
+
+    .card {
+        flex-direction: column-reverse;
+    }
+
+    .card img {
+        scale: 0.8;
+    }
+
+    .front {
+        translate: -2rem 0;
+        margin-bottom: -3rem;
+        z-index: 9999;
+    }
+
+    .back {
+
+        translate: 2rem 0rem;
+        margin-bottom: -8rem;
+
+    }
+
+    .print {
+        padding: 0.4rem 1rem 2rem 1rem;
+    }
+
+    .form {
+        padding-top: 4rem;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        /* padding-inline: 2rem; */
+    }
+
+    .print .card-num {
+        font-size: 1.5rem;
+    }
+
+    .last-flexer {
+        font-size: 1rem;
+        padding-inline: 0rem;
+    }
+
+}
