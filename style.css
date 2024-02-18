@@ -154,7 +154,6 @@ button:hover{
 .inliner {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     gap: 1rem;
     flex: 0.5;
 }
@@ -231,9 +230,13 @@ button:hover{
         width: 100%;
         /* padding-inline: 2rem; */
     }
+    .flexer-input,.inliner{
+        align-items:center;
+
+    }
 
     .print .card-num {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .last-flexer {
